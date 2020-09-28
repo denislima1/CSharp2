@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrintService.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Services\CalculationService.cs" />
+    <Compile Include="Services\PrintService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
