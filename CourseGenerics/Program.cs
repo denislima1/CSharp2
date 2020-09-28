@@ -1,9 +1,5 @@
 ﻿using Course;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CourseGenerics
 {
@@ -11,8 +7,7 @@ namespace CourseGenerics
     {
         static void Main(string[] args)
         {
-
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
 
             Console.Write("How many values? ");
             int n = int.Parse(Console.ReadLine());
