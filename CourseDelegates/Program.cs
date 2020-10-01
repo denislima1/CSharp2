@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CourseDelegates
 {
 
-    delegate double BinaryNumericOperation(double n1, double n2);
+    delegate void BinaryNumericOperation(double n1, double n2);
     class Program
     {
         static void Main(string[] args)
@@ -16,17 +16,11 @@ namespace CourseDelegates
             double a = 10;
             double b = 12;
 
-            BinaryNumericOperation op0 = CalculationService.Sum;
-            BinaryNumericOperation op1 = CalculationService.Max;
+            BinaryNumericOperation op = CalculationService.ShowSum;
+            op += CalculationService.ShowMax;
             double result2 = CalculationService.Square(a);
 
-
-            double result0 = op0(a, b);
-            double result1 = op1(a, b);
-
-            Console.WriteLine(result0);
-            Console.WriteLine(result1);
-            Console.WriteLine(result2);
+            op(a, b);
 
             Console.ReadLine();
         }
