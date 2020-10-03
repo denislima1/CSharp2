@@ -24,9 +24,10 @@ namespace CoursePredicate
             list.Add(new Product("HD Case", 80.90));
 
             //Func<Product, string> func = NameUpper;
-            Func<Product, string> func = p => p.Name.ToUpper();
+            //Func<Product, string> func = p => p.Name.ToUpper();
 
-            List<string> result =  list.Select(func).ToList();
+            //List<string> result = list.Select(func).ToList();
+            List<string> result =  list.Select(p => p.Name.ToUpper()).ToList();
             foreach (string s in result)
             {
                 Console.WriteLine(s);
